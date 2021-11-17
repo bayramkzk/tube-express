@@ -1,7 +1,14 @@
 {
   "name": "tube-express",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "author": "bayramdev <48856944+bayramkazik@users.noreply.github.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon .",
+    "start": "node ."
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
