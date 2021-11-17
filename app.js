@@ -7,10 +7,7 @@ const { router } = require("./router");
 const app = express();
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
-
-const public = express.static(path.join(__dirname, "public"));
-app.use("/public", public);
-
+app.use("/public", express.static(path.join(__dirname, "public")));
 app.use(router);
 
 const PORT = process.env.PORT;
