@@ -16,6 +16,7 @@ Desktop.ini
 node_modules
 package-lock.json
 yarn.lock
+.adminjs
 
 # Env
 .env

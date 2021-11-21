@@ -12,9 +12,15 @@
     "nodemon": "^2.0.15"
   },
   "dependencies": {
+    "@adminjs/express": "^4.0.0",
+    "@adminjs/mongoose": "^2.0.0",
+    "adminjs": "^5.3.2",
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "mongoose": "^6.0.13"
+    "express-formidable": "^1.2.0",
+    "express-session": "^1.17.2",
+    "mongoose": "^6.0.13",
+    "tslib": "^2.3.1"
   }
 }
