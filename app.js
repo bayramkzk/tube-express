@@ -1,4 +1,6 @@
-require("dotenv").config();
+if (process.env.NODE_ENV === "development") {
+  require("dotenv").config();
+}
 
 const express = require("express");
 const mongoose = require("mongoose");
@@ -13,7 +15,7 @@ const main = async () => {
   app.use(router);
 
   await mongoose.connect(process.env.DATABASE_URL);
-  console.log("Connected to MongoDB database")
+  console.log("Connected to MongoDB database");
 
   const PORT = process.env.PORT;
   app.listen(PORT, () => {
