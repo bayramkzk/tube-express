@@ -18,5 +18,9 @@ package-lock.json
 yarn.lock
 .adminjs
 
+# Editor
+.vscode
+.idea
+
 # Env
 .env
