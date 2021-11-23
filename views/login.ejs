@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("partials/head") %>
+    <title><%= appName %> | Admin Login</title>
+    <link rel="stylesheet" href="/public/login.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <section class="form-section">
+        <header class="form-header">
+          <h1 class="form-title">Admin Login</h1>
+          <caption class="form-caption">
+            Please enter your credentials
+          </caption>
+        </header>
+        <form action="/admin" method="post" class="login-form">
+          <article class="form-item">
+            <input
+              type="text"
+              autocomplete="off"
+              name="username"
+              id="username-input"
+              placeholder="Username"
+              class="form-input"
+            />
+          </article>
+          <article class="form-item">
+            <input
+              type="password"
+              name="password"
+              id="password-input"
+              placeholder="Password"
+              class="form-input"
+            />
+          </article>
+
+          <% if (wrongPassword) { %>
+          <article class="wrong-password-article">
+            The credentials are not valid!
+          </article>
+          <% } if (serverError) { %>
+          <article class="server-error-article">Server error occured!</article>
+          <% } %>
+
+          <article class="form-item">
+            <input type="submit" value="LOG IN" class="form-submit" />
+          </article>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
