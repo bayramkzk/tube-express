@@ -1,5 +1,6 @@
 const express = require("express");
 const homeRouter = require("./home");
+const videosRouter = require("./videos");
 const starsRouter = require("./stars");
 const tagsRouter = require("./tags");
 const favoritesRouter = require("./favorites");
@@ -10,6 +11,7 @@ const authRouter = require("../auth");
 const router = express.Router();
 
 router.use("/", homeRouter);
+router.use("/videos", videosRouter);
 router.use("/stars", starsRouter);
 router.use("/tags", tagsRouter);
 router.use("/favorites", favoritesRouter);
