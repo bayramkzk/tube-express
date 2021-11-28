@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%- include("partials/head") %> 
+    <%- include("partials/head") %>
     <title><%= appName %></title>
+    <link rel="stylesheet" href="/public/home.css" />
   </head>
   <body>
     <div class="page-container">
-      <%- include("partials/header") %> 
-      <h1>Home</h1>
+      <%- include("partials/header") %>
+
+      <section class="video-grid-section">
+        <h2 class="video-grid-header"><%= headerText %></h2>
+        <%- include("partials/video-grid") %>
+      </section>
     </div>
   </body>
 </html>
