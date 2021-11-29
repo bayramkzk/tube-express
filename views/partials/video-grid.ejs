@@ -1,15 +1,22 @@
-<div class="video-grid">
-  <% for (const video of videos) { %>
-  <article class="video-thumbnail-article">
-    <a href="/videos/<%= video._id %>" title="<%= video.title %>">
-      <img
-        src="<%= video.thumbnailUrl %>"
-        alt="<%= video.title %>"
-        class="video-thumbnail-image"
-      />
-      <div class="video-thumbnail-title"><%= video.title %></div>
-    </a>
-  </article>
-  <% } %>
-</div>
-<link rel="stylesheet" href="/public/video-grid.css">
+<section class="video-grid-section">
+  <h2 class="video-grid-header"><%= headerText %></h2>
+
+  <div class="video-grid">
+    <% for (const video of videos) { %>
+    <article class="video-thumbnail-article">
+      <a
+        class="video-thumbnail-anchor"
+        href="/videos/<%= video._id %>"
+        title="<%= video.title %>"
+      >
+        <img
+          src="<%= video.thumbnailUrl %>"
+          alt="<%= video.title %>"
+          class="video-thumbnail-image"
+        />
+        <div class="video-thumbnail-title"><%= video.title %></div>
+      </a>
+    </article>
+    <% } %>
+  </div>
+</section>
